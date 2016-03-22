@@ -6,6 +6,16 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+  <div ng-controller="IndexController as Ctrl">
+    <main>
+      <h1>{{ Ctrl.title.en }}</h1>
+
+      <ol>
+        <li ng-repeat="line in Ctrl.lines">{{ line.en }}</li>
+      </ol>
+    </main>
+  </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.22/require.min.js" data-main="js/main"></script>
 </body>
 </html>

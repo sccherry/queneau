@@ -21,7 +21,7 @@
       <h1>{{ Ctrl.title[Ctrl.activeLang] }}</h1>
 
       <ol>
-        <li ng-repeat="line in Ctrl.lines">{{ line[Ctrl.activeLang] }}</li>
+        <li ng-repeat="line in Ctrl.lines" ng-class="Ctrl.isChanged($index)">{{ line[Ctrl.activeLang] }}</li>
       </ol>
     </main>
 

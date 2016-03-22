@@ -7,6 +7,10 @@
 </head>
 <body>
   <div ng-controller="IndexController as Ctrl">
+    <header>
+      <a href="https://en.wikipedia.org/wiki/Hundred_Thousand_Billion_Poems">About</a>
+    </header>
+
     <main>
       <h1>{{ Ctrl.title.en }}</h1>
 
@@ -14,6 +18,10 @@
         <li ng-repeat="line in Ctrl.lines">{{ line.en }}</li>
       </ol>
     </main>
+
+    <footer>
+      <p>A <a href="https://github.com/sccherry/queneau">project</a> by <a href="https://github.com/sccherry">Steve Cherry</a>.</p>
+    </footer>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.22/require.min.js" data-main="js/main"></script>

@@ -10,11 +10,14 @@ require.config({
 });
 
 require([
-  'angular'
-], function (angular) {
+  'angular',
+  'app/index.controller'
+], function (angular, IndexController) {
   'use strict';
 
   var app = angular.module('app', []);
+
+  app.controller('IndexController', IndexController);
 
   angular.bootstrap(document, ['app']);
 });

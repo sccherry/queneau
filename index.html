@@ -6,16 +6,22 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <div ng-controller="IndexController as Ctrl">
+  <div ng-controller="IndexController as Ctrl" lang="{{ Ctrl.activeLang }}">
     <header>
+      <label ng-repeat="lang in Ctrl.langs" ng-class="Ctrl.isActiveLang(lang)">
+        <input type="radio" name="activeLang" value="{{ lang }}" ng-model="Ctrl.activeLang" ng-selected="lang === Ctrl.activeLang"> {{ lang }}
+      </label>
+
+      |
+
       <a href="https://en.wikipedia.org/wiki/Hundred_Thousand_Billion_Poems">About</a>
     </header>
 
     <main>
-      <h1>{{ Ctrl.title.en }}</h1>
+      <h1>{{ Ctrl.title[Ctrl.activeLang] }}</h1>
 
       <ol>
-        <li ng-repeat="line in Ctrl.lines">{{ line.en }}</li>
+        <li ng-repeat="line in Ctrl.lines">{{ line[Ctrl.activeLang] }}</li>
       </ol>
     </main>
 

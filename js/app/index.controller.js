@@ -14,6 +14,15 @@ define([
 
     self.lines = [];
 
+    self.langs = ['fr', 'en'];
+
+    self.activeLang = 'en';
+
+    self.title = {
+      'fr': 'Cent mille milliards de poèmese',
+      'en': 'One hundred million million poems'
+    };
+
 
     /**
      * Private functions
@@ -27,6 +36,15 @@ define([
       line = data[i][lineIndex];
 
       return line;
+    }
+
+
+    /**
+     * Public functions
+     */
+
+    self.isActiveLang = function (lang) {
+      return lang === self.activeLang ? 'is-active': '';
     }
 
 

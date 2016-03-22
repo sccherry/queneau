@@ -1,3 +1,70 @@
 @charset "UTF-8";
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css");
+
+
+
+
+
+/*---------------------*\
+  #BASE
+\*---------------------*/
+
+
+/**
+ * Axioms
+ */
+
+* {
+  overflow: inherit;
+  box-sizing: inherit;
+}
+
+* + * {
+  margin-top: 1.5rem;
+}
+
+:root {
+  --colorPrimary: #00f;
+}
+
+html {
+  overflow: auto;
+  box-sizing: border-box;
+  font-size: 100%;
+  color: #222;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+
+/**
+ * Text
+ */
+
+h1 {
+  font-size: 2.368rem;
+  line-height: 3rem;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li + li {
+  margin-top: 0;
+}
+
+
+/**
+ * Forms
+ */
+
+input[type="radio"] {
+  display: none;
+}
+

@@ -84,3 +84,59 @@ input[type="radio"] {
   display: none;
 }
 
+
+
+
+
+
+/*---------------------*\
+  #SHAME
+\*---------------------*/
+
+
+body > div {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+/**
+ * Header
+ */
+
+header {
+  text-align: right;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: .75rem;
+  text-transform: uppercase;
+}
+
+header a {
+  text-decoration: none;
+}
+
+
+/**
+ * Main
+ */
+
+main {
+  max-width: 33rem;
+  margin: 0 auto;
+  flex: 1;
+}
+
+main h1 {
+  text-align: center;
+}
+
+
+/**
+ * Footer
+ */
+
+footer {
+  text-align: center;
+  background-color: #f5f5f5;
+}

@@ -88,6 +88,50 @@ input[type="radio"] {
 
 
 
+/*---------------------*\
+  #UTILITIES
+\*---------------------*/
+
+
+/**
+ * Keyframes
+ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+/*---------------------*\
+  #Components
+\*---------------------*/
+
+
+/**
+ * Poem
+ */
+
+.Poem li {
+  transition: color 1s;
+}
+
+.Poem li.is-changed {
+  animation: fadeIn 2s;
+  color: var(--colorPrimary);
+}
+
+
+
+
 
 /*---------------------*\
   #SHAME

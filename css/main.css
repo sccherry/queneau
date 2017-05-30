@@ -1,0 +1,189 @@
+@charset "UTF-8";
+
+
+/*---------------------*\
+  #BASE
+\*---------------------*/
+
+
+/**
+ * Axioms
+ */
+
+* {
+  overflow: inherit;
+  box-sizing: inherit;
+}
+
+* + * {
+  margin-top: 1.5rem;
+}
+
+:root {
+  --colorPrimary: #00f;
+}
+
+html {
+  overflow: auto;
+  box-sizing: border-box;
+  font-size: 100%;
+  color: #222;
+}
+
+body {
+  font-family: serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 0;
+}
+
+
+/**
+ * Text
+ */
+
+h1 {
+  font-size: 2.368rem;
+  line-height: 3rem;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li + li {
+  margin-top: 0;
+}
+
+a {
+  color: currentColor;
+}
+
+a:hover,
+a:focus {
+  color: var(--colorPrimary);
+}
+
+
+/**
+ * Forms
+ */
+
+label.is-active {
+  color: var(--colorPrimary);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+
+
+
+
+/*---------------------*\
+  #UTILITIES
+\*---------------------*/
+
+
+/**
+ * Keyframes
+ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+/*---------------------*\
+  #Components
+\*---------------------*/
+
+
+/**
+ * Poem
+ */
+
+.Poem li {
+  transition: color 1s;
+}
+
+.Poem li.is-changed {
+  animation: fadeIn 2s;
+  color: var(--colorPrimary);
+}
+
+
+
+
+
+/*---------------------*\
+  #SHAME
+\*---------------------*/
+
+
+body > div {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+/**
+ * Header
+ */
+
+header {
+  text-align: right;
+  font-family: sans-serif;
+  padding: .75rem;
+  text-transform: uppercase;
+}
+
+header a {
+  text-decoration: none;
+}
+
+
+/**
+ * Main
+ */
+
+main {
+  max-width: 33rem;
+  margin: 0 auto;
+  flex: 1;
+}
+
+main h1 {
+  text-align: center;
+}
+
+
+/**
+ * Footer
+ */
+
+footer {
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+form {
+  display: inline;
+}
+
+[lang="en"] [lang="fr"],
+[lang="fr"] [lang="en"] {
+  display: none;
+}
